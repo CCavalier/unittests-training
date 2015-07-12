@@ -36,7 +36,7 @@ public class UserService {
 	}
 	
 	public User login(String username, String password) {
-		User user = userDao.findByUsernameAndPassword(username, encryptPassword(password));
+		User user = userDao.findByUsernameAndPassword(username, password);
 		if (user == null) {
 			throw new AuthenticationException();
 		}

@@ -20,6 +20,8 @@ public class UserController {
 	@RequestMapping(value="/connect", method=RequestMethod.POST, produces="application/json")
 	@ResponseBody
 	public User connect(String username, String password) {
+		System.out.println("Username:"+username);
+		System.out.println("Password::"+password);
 		return userService.login(username, password);
 	}
 	
